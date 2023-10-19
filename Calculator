@@ -1,0 +1,74 @@
+Calculator
+ex]
+ input:
+        4
+        1 2 3 4
+        add
+output:10
+------------------------------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{ 
+     int sum=0;
+     void add(int a[] ,int n){
+         for(int i=0;i<n;i++){
+             sum=sum+a[i];
+         }
+         System.out.println("Addition:"+sum);
+     }
+     void mul(int a[],int n){
+        // int n=a.length();
+         int m=0;
+         for(int i=0;i<n;i++){
+             m=m*a[i];
+         }
+         System.out.println("Multiplication:"+m);
+     }
+     void sub(int a[],int n){
+        // int n=a.length();
+        int sub=a[0];
+         for(int i=1;i<n;i++){
+             sub-=a[i];
+         }
+         
+         System.out.println("Sub:"+sub);
+     }
+     void div(int a[],int n){
+        int d=a[0];
+         for(int i=1;i<n;i++){
+             d/=a[i];
+         }
+         
+         System.out.println("Division:"+d);
+     }
+     
+	 public static void  main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Main obj=new Main();
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		System.out.println("Enter choice");
+		System.out.println("1.add 2.sub 3.mul 4.div");
+		int ch=sc.nextInt();
+		switch(ch){
+		    case 1:
+		        obj.add(a,n);
+		        break;
+		    case 2:
+		        obj.sub(a,n);
+		        break;
+		    case 3:
+		        obj.mul(a,n);
+		        break;
+		     case 4:
+		         obj.div(a,n);
+		           break;  
+		}
+	
+	
+	}
+	
+}
