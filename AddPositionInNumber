@@ -1,0 +1,34 @@
+
+Add Position in number which is present that position
+EX} 
+  - 5
+  - 1 2 3 4 5
+  output:2 2 3  4 5
+    2 4 3 4 5
+    2 4 6 4 5
+    2 4 6 8 5
+    2 4 6 8 10
+-----------------------------------------------------------------------------------
+package com.homework;
+
+import java.util.Scanner;
+
+public class AddPosition {
+    public static void main(String args[]) {
+    	Scanner sc=new Scanner(System.in);
+			 int n=sc.nextInt();
+			 int a[]=new int[n];
+			 for(int i=0;i<n;i++){
+			    a[i]=sc.nextInt();
+			 }
+			 
+			for(int i=0;i<n;i++) {
+				int num = i+1+a[i];
+				a[i] = num;
+				for(int j = 0;j<n;j++) {
+					System.out.print(a[j]+" " );   
+				}
+				System.out.println();
+			}	     
+    }
+}
