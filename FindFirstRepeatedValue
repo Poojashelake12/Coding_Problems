@@ -1,0 +1,23 @@
+return the first value that is repeating in the array.if no value being repeated ,return -1
+
+------------------------------------------------------------------------------
+class Main{
+    public static int FindFirstRepeated(int arr[]){
+        int len=arr.length;
+        
+        for(int i=0;i<len;i++){
+            for(int j=i+1;j<len;j++){
+                if(arr[i]==arr[j]){
+                    return arr[i];
+                      
+                }
+            }
+        }
+        return -1;
+    }
+    
+    public static void main(String args[]){
+        int a[]={1,2,7,2,8,5};
+        System.out.println(FindFirstRepeated(a));
+    }
+}
